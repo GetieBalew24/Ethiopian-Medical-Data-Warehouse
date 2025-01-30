@@ -46,8 +46,12 @@ class DataCleaner:
             logging.warning(f"Found {len(invalid_rows)} invalid rows with missing 'id' or 'date'.")
             self.df = self.df.drop(invalid_rows.index)
         logging.info("Data validation completed.")
-        
+
     def store_cleaned_data(self, output_path: str):
         """Stores the cleaned DataFrame to a file."""
         self.df.to_csv(output_path, index=False)
         logging.info(f"Cleaned data stored in {output_path}")
+    
+    def get_cleaned_data(self):
+        """Returns the cleaned DataFrame."""
+        return self.df
