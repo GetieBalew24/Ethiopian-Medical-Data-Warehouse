@@ -3,6 +3,7 @@ import os
 import logging
 import sys
 import os
+import ast
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 from dotenv import load_dotenv
@@ -66,3 +67,44 @@ def insert_dataframe_to_db(df, table_name='telegram_data'):
         cur.close()
         conn.close()
         logging.info("Database connection closed.")
+
+# Function to insert detection result data into PostgreSQL
+def insert_detection_data(df):
+    conn = get_db_connection()
+    if conn:
+        try:
+            cursor = conn.cursor()
+            insert_query = """
+            INSERT INTO detection_results (image_name, confidence_score, class_name, bbox_coordinates, result_image_path)
+            VALUES (%s, %s, %s, %s, %s)
+            """
+            # Iterate through the DataFrame rows and insert data into PostgreSQL
+            for index, row in df.iterrows():
+                # Convert bbox_coordinates to a list if it's a string representation
+                if isinstance(row['bbox_coordinates'], str):
+                    row['bbox_coordinates'] = ast.literal_eval(row['bbox_coordinates'])
+
+                # Ensure bbox_coordinates is a list and convert to string with braces
+                if isinstance(row['bbox_coordinates'], list):
+                    bbox_coords = '{' + ','.join(map(str, row['bbox_coordinates'])) + '}'
+                else:
+                    raise ValueError("bbox_coordinates must be a list.")
+
+                cursor.execute(insert_query, (
+                    row['image_name'], 
+                    row['confidence_score'], 
+                    row['class_name'], 
+                    bbox_coords,
+                    row['result_image_path']
+                ))
+
+            # Commit the transaction
+            conn.commit()
+            cursor.close()
+            print("Data successfully inserted into PostgreSQL.")
+        except Exception as e:
+            print(f"Error inserting data into PostgreSQL: {e}")
+        finally:
+            conn.close()
+    else:
+        print("Failed to connect to the database.")
