@@ -34,3 +34,35 @@ def get_db_connection():
     except Exception as e:
         logging.error("Error connecting to the database: %s", e)
         raise
+# Function to insert DataFrame into PostgreSQL
+def insert_dataframe_to_db(df, table_name='telegram_data'):
+    try:
+        # Get a connection
+        conn = get_db_connection()
+        cur = conn.cursor()
+
+        # Define SQL query to insert data
+        insert_query = f"""
+            INSERT INTO {table_name} (message_id, date, sender, channel,  text)
+            VALUES (%s, %s, %s, %s, %s)
+        """
+
+        # Loop through DataFrame and insert each row
+        for _, row in df.iterrows():
+            cur.execute(insert_query, (
+                row['id'],
+                row['date'],
+                row['sender'],
+                row['channel'],
+                row['text']
+            ))
+
+        # Commit the transaction and close the connection
+        conn.commit()
+        logging.info("Data successfully inserted into the PostgreSQL database.")
+    except Exception as e:
+        logging.error("Error inserting data into the database: %s", e)
+    finally:
+        cur.close()
+        conn.close()
+        logging.info("Database connection closed.")
