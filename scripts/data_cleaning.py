@@ -25,3 +25,9 @@ class DataCleaner:
         self.df = self.df.drop_duplicates(subset='message_id', keep='first')
         after_removal = len(self.df)
         logging.info(f"Removed {before_removal - after_removal} duplicate rows.")
+    def handle_missing_values(self):
+        """Handles missing values by filling or dropping them."""
+        before_removal = len(self.df)
+        self.df = self.df.dropna(subset=['message_id', 'text', 'sender', 'channel', 'date'])
+        after_removal = len(self.df)
+        logging.info(f"Removed {before_removal - after_removal} rows due to missing values.")
