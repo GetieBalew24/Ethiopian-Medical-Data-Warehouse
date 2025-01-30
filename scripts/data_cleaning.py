@@ -19,3 +19,9 @@ class DataCleaner:
         :param df: The DataFrame containing the Telegram data.
         """
         self.df = df
+    def remove_duplicates(self):
+        """Removes duplicate messages based on 'message_id'."""
+        before_removal = len(self.df)
+        self.df = self.df.drop_duplicates(subset='message_id', keep='first')
+        after_removal = len(self.df)
+        logging.info(f"Removed {before_removal - after_removal} duplicate rows.")
