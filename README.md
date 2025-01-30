@@ -1,2 +1,33 @@
 # Ethiopian-Medical-Data-Warehouse
 This project is a comprehensive data warehousing solution designed to store and analyze data on Ethiopian medical businesses, scraped from the web and Telegram channels. It integrates ETL/ELT pipelines, object detection using YOLO, and data enrichment to provide actionable insights.
+## Core Objectives
+
+- **Data Centralization**: Collect and store data from multiple sources, including Telegram channels.
+- **Efficient Data Processing**: Implement ETL/ELT frameworks for structured and unstructured data.
+- **Object Detection Integration**: Use YOLOv5 for object detection in images.
+- **Data Quality Assurance**: Ensure data accuracy and cleanliness using DBT.
+  
+## Project structure
+
+The repository is organized into the following directories:
+
+- **.github/workflows/**: Configuration files for GitHub Actions to enable continuous integration (CI) and automated testing.
+
+- **.vscode/**: Visual Studio Code configuration files for optimizing the development environment.
+
+- **Fast_API/**: Implementation of the machine learning model API, providing RESTful endpoints for model interaction.
+
+- **Kara_dbt/**: DBT (Data Build Tool) project files for data transformation and documentation, ensuring data quality.
+
+- **database/**: Scripts and configurations for managing PostgreSQL connections and interactions.
+
+- **notebooks/**: Jupyter notebooks for data exploration, feature engineering, and preliminary modeling.
+
+- **scripts/**: Python scripts for data preprocessing, feature extraction, and credit scoring model implementation.
+
+- **tests/**: Unit tests to ensure the correctness and robustness of the model and data processing logic.
+
+- **requirements.txt**: Lists dependencies and libraries required for the project setup.
+
+- **README.md**: Main documentation file with an overview of the project, installation instructions, and usage guidelines.
+
