@@ -35,6 +35,49 @@ def get_db_connection():
     except Exception as e:
         logging.error("Error connecting to the database: %s", e)
         raise
+def create_tables():
+    try:
+        # Establish the connection
+        conn = get_db_connection()
+        cur = conn.cursor()
+        
+        # SQL query to create telegram_data table
+        create_telegram_table = """
+        CREATE TABLE IF NOT EXISTS telegram_data (
+            message_id TEXT PRIMARY KEY,
+            date TIMESTAMP NOT NULL,
+            sender TEXT NOT NULL,
+            channel TEXT NOT NULL,
+            text TEXT
+        );
+        """
+        
+        # SQL query to create detection_results table
+        create_detection_table = """
+        CREATE TABLE IF NOT EXISTS detection_results (
+            id TEXT PRIMARY KEY,
+            image_name TEXT NOT NULL,
+            confidence_score FLOAT NOT NULL,
+            class_name TEXT NOT NULL,
+            bbox_coordinates TEXT NOT NULL,
+            result_image_path TEXT NOT NULL
+        );
+        """
+        
+        # Execute queries
+        cur.execute(create_telegram_table)
+        cur.execute(create_detection_table)
+        
+        # Commit the changes
+        conn.commit()
+        logging.info("Tables successfully created.")
+    except Exception as e:
+        logging.error("Error creating tables: %s", e)
+    finally:
+        cur.close()
+        conn.close()
+        logging.info("Database connection closed.")
+
 # Function to insert DataFrame into PostgreSQL
 def insert_dataframe_to_db(df, table_name='telegram_data'):
     try:
@@ -51,7 +94,7 @@ def insert_dataframe_to_db(df, table_name='telegram_data'):
         # Loop through DataFrame and insert each row
         for _, row in df.iterrows():
             cur.execute(insert_query, (
-                row['id'],
+                row['message_id'],
                 row['date'],
                 row['sender'],
                 row['channel'],
