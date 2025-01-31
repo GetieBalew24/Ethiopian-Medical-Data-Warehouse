@@ -17,7 +17,7 @@ The repository is organized into the following directories:
 
 - **Fast_API/**: Implementation of the machine learning model API, providing RESTful endpoints for model interaction.
 
-- **Kara_dbt/**: DBT (Data Build Tool) project files for data transformation and documentation, ensuring data quality.
+- **ethi_medical_dbt/**: DBT (Data Build Tool) project files for data transformation and documentation, ensuring data quality.
 
 - **database/**: Scripts and configurations for managing PostgreSQL connections and interactions.
 
@@ -31,3 +31,48 @@ The repository is organized into the following directories:
 
 - **README.md**: Main documentation file with an overview of the project, installation instructions, and usage guidelines.
 
+## Installation Instructions
+
+### Setting Up the Environment
+Ensure you have the necessary dependencies installed:
+
+```bash
+# Install essential libraries
+pip install opencv-python
+pip install dbt                 # for data transformation
+```
+1. Clone the Repository:
+>>>>
+    git clone https://github.com/GetieBalew24/Ethiopian-Medical-Data-Warehouse.git`
+
+    cd Ethiopian-Medical-Data-Warehouse
+>>>>
+
+2. Set up the Virtual Environment:
+
+Create a virtual environment to manage the project's dependencies:
+
+>>>
+    python3 -m venv .venv
+
+    source .venv/Scripts/activate  
+>>>
+
+
+3. Install Dependencies:
+
+Install the required Python packages by running:
+>>>
+    pip install -r requirements.txt
+>>>
+## Tasks
+
+- **Task 1**: Scraping Data from Telegram Channels
+- **Task 2**: Data Transformation using DBT
+
+## Contributing
+ We welcome contributions to improve the project. Please follow the steps below to contribute:
+
+- Fork the repository.
+- Create a new branch for your feature or bugfix.
+- Submit a pull request with a detailed explanation of your changes.
