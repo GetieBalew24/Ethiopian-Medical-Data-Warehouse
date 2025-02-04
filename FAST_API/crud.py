@@ -1,7 +1,8 @@
 from sqlalchemy.orm import Session
+import uuid
 from . import models, schemas
 
-def get_detection_result(db: Session, result_id: int):
+def get_detection_result(db: Session, result_id:uuid.UUID):
     result = db.query(models.DetectionResult).filter(models.DetectionResult.id == result_id).first()
     if result:
         print(f"Found detection result: {result}")
@@ -23,7 +24,7 @@ def create_detection_result(db: Session, result: schemas.DetectionResultCreate):
     return db_result
 
 
-def delete_detection_result(db: Session, result_id: int):
+def delete_detection_result(db: Session, result_id:uuid.UUID):
     db_result = get_detection_result(db, result_id)
     if db_result:
         db.delete(db_result)
