@@ -40,6 +40,9 @@ Ensure you have the necessary dependencies installed:
 # Install essential libraries
 pip install opencv-python
 pip install dbt                 # for data transformation
+pip install torch torchvision  # for PyTorch-based YOLO
+pip install tensorflow          # for TensorFlow-based YOLO
+pip install fastapi uvicorn 
 ```
 1. Clone the Repository:
 >>>>
@@ -69,6 +72,8 @@ Install the required Python packages by running:
 
 - **Task 1**: Scraping Data from Telegram Channels
 - **Task 2**: Data Transformation using DBT
+- **Task 3**: Object Detection using YOLO
+- **Task 4**: FastAPI Integration
 
 ## Contributing
  We welcome contributions to improve the project. Please follow the steps below to contribute:
