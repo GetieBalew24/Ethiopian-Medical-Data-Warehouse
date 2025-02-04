@@ -1,0 +1,150 @@
+2025-01-31 00:51:22,305 - ERROR - Column 'id' does not exist in the DataFrame.
+2025-01-31 00:51:22,306 - ERROR - Error removing duplicates: "Column 'id' not found in the DataFrame."
+2025-01-31 00:51:23,688 - ERROR - Column 'id' does not exist in the DataFrame.
+2025-01-31 00:51:23,689 - ERROR - Error removing duplicates: "Column 'id' not found in the DataFrame."
+2025-01-31 00:56:17,499 - INFO - Removed 0 duplicate rows.
+2025-01-31 00:57:51,200 - INFO - Removed 0 duplicate rows.
+2025-01-31 00:57:54,083 - INFO - Removed 0 duplicate rows.
+2025-01-31 00:57:58,796 - INFO - Removed 0 duplicate rows.
+2025-01-31 01:02:21,137 - INFO - Removed 0 duplicate rows.
+2025-01-31 01:02:21,146 - INFO - Removed 1251 rows due to missing values.
+2025-01-31 01:05:52,148 - INFO - Removed 0 duplicate rows.
+2025-01-31 01:05:52,159 - INFO - Removed 1251 rows due to missing values.
+2025-01-31 01:05:52,170 - INFO - Standardized date formats and cleaned text fields.
+2025-01-31 01:07:56,407 - INFO - Removed 0 duplicate rows.
+2025-01-31 01:07:56,437 - INFO - Removed 1251 rows due to missing values.
+2025-01-31 01:07:56,481 - INFO - Standardized date formats and cleaned text fields.
+2025-01-31 01:07:58,447 - INFO - Removed 0 duplicate rows.
+2025-01-31 01:07:58,457 - INFO - Removed 1251 rows due to missing values.
+2025-01-31 01:07:58,478 - INFO - Standardized date formats and cleaned text fields.
+2025-01-31 01:11:25,731 - INFO - Removed 0 duplicate rows.
+2025-01-31 01:11:25,757 - INFO - Removed 1251 rows due to missing values.
+2025-01-31 01:11:25,783 - INFO - Standardized date formats and cleaned text fields.
+2025-01-31 01:11:25,799 - INFO - Data validation completed.
+2025-01-31 01:11:40,592 - INFO - Removed 0 duplicate rows.
+2025-01-31 01:11:40,606 - INFO - Removed 1251 rows due to missing values.
+2025-01-31 01:11:40,624 - INFO - Standardized date formats and cleaned text fields.
+2025-01-31 01:11:40,631 - INFO - Data validation completed.
+2025-01-31 01:34:57,273 - INFO - Removed 0 duplicate rows.
+2025-01-31 01:34:57,282 - INFO - Removed 1251 rows due to missing values.
+2025-01-31 01:34:57,295 - INFO - Standardized date formats and cleaned text fields.
+2025-01-31 01:34:57,303 - INFO - Data validation completed.
+2025-01-31 01:34:57,354 - INFO - Cleaned data stored in ../data/cleaned_data.csv
+2025-01-31 01:36:31,638 - INFO - Removed 0 duplicate rows.
+2025-01-31 01:36:31,650 - INFO - Removed 1251 rows due to missing values.
+2025-01-31 01:36:31,666 - INFO - Standardized date formats and cleaned text fields.
+2025-01-31 01:36:31,673 - INFO - Data validation completed.
+2025-01-31 01:36:31,767 - INFO - Cleaned data stored in ../data/cleaned_data.csv
+2025-01-31 01:41:30,800 - ERROR - Error connecting to the database: connection to server at "localhost" (127.0.0.1), port 5432 failed: FATAL:  database "Eth_Medical_DB" does not exist
+
+2025-01-31 01:41:30,801 - ERROR - Error inserting data into the database: connection to server at "localhost" (127.0.0.1), port 5432 failed: FATAL:  database "Eth_Medical_DB" does not exist
+
+2025-01-31 01:51:19,671 - INFO - Removed 0 duplicate rows.
+2025-01-31 01:51:19,679 - INFO - Removed 1251 rows due to missing values.
+2025-01-31 01:51:19,698 - INFO - Standardized date formats and cleaned text fields.
+2025-01-31 01:51:19,711 - INFO - Data validation completed.
+2025-01-31 01:51:19,816 - INFO - Cleaned data stored in ../data/cleaned_data.csv
+2025-01-31 01:52:33,278 - INFO - Removed 0 duplicate rows.
+2025-01-31 01:52:33,286 - INFO - Removed 1251 rows due to missing values.
+2025-01-31 01:52:33,304 - INFO - Standardized date formats and cleaned text fields.
+2025-01-31 01:52:33,311 - INFO - Data validation completed.
+2025-01-31 01:52:33,359 - INFO - Cleaned data stored in ../data/cleaned_data.csv
+2025-01-31 01:52:33,426 - ERROR - Error connecting to the database: connection to server at "localhost" (127.0.0.1), port 5432 failed: FATAL:  database "Eth_Medical_DB" does not exist
+
+2025-01-31 01:52:33,427 - ERROR - Error creating tables: connection to server at "localhost" (127.0.0.1), port 5432 failed: FATAL:  database "Eth_Medical_DB" does not exist
+
+2025-01-31 01:53:52,911 - INFO - Removed 0 duplicate rows.
+2025-01-31 01:53:52,919 - INFO - Removed 1251 rows due to missing values.
+2025-01-31 01:53:52,949 - INFO - Standardized date formats and cleaned text fields.
+2025-01-31 01:53:52,961 - INFO - Data validation completed.
+2025-01-31 01:53:53,041 - INFO - Cleaned data stored in ../data/cleaned_data.csv
+2025-01-31 01:53:53,141 - INFO - Database connection established successfully.
+2025-01-31 01:53:53,154 - INFO - Tables successfully created.
+2025-01-31 01:53:53,155 - INFO - Database connection closed.
+2025-01-31 01:53:53,171 - INFO - Database connection established successfully.
+2025-01-31 01:53:53,175 - ERROR - Error inserting data into the database: 'id'
+2025-01-31 01:53:53,175 - INFO - Database connection closed.
+2025-01-31 01:54:01,425 - INFO - Removed 0 duplicate rows.
+2025-01-31 01:54:01,434 - INFO - Removed 1251 rows due to missing values.
+2025-01-31 01:54:01,447 - INFO - Standardized date formats and cleaned text fields.
+2025-01-31 01:54:01,454 - INFO - Data validation completed.
+2025-01-31 01:54:01,511 - INFO - Cleaned data stored in ../data/cleaned_data.csv
+2025-01-31 01:54:01,583 - INFO - Database connection established successfully.
+2025-01-31 01:54:01,585 - INFO - Tables successfully created.
+2025-01-31 01:54:01,585 - INFO - Database connection closed.
+2025-01-31 01:54:01,622 - INFO - Database connection established successfully.
+2025-01-31 01:54:01,634 - ERROR - Error inserting data into the database: 'id'
+2025-01-31 01:54:01,635 - INFO - Database connection closed.
+2025-01-31 02:02:30,487 - INFO - Removed 0 duplicate rows.
+2025-01-31 02:02:30,498 - INFO - Removed 1251 rows due to missing values.
+2025-01-31 02:02:30,520 - INFO - Standardized date formats and cleaned text fields.
+2025-01-31 02:02:30,526 - INFO - Data validation completed.
+2025-01-31 02:02:30,574 - INFO - Cleaned data stored in ../data/cleaned_data.csv
+2025-01-31 02:02:30,626 - INFO - Database connection established successfully.
+2025-01-31 02:02:30,631 - ERROR - Error inserting data into the database: relation "telegram_data" does not exist
+LINE 2:             INSERT INTO telegram_data (message_id, date, sen...
+                                ^
+
+2025-01-31 02:02:30,632 - INFO - Database connection closed.
+2025-01-31 02:02:39,108 - INFO - Database connection established successfully.
+2025-01-31 02:02:39,112 - ERROR - Error inserting data into the database: relation "telegram_data" does not exist
+LINE 2:             INSERT INTO telegram_data (message_id, date, sen...
+                                ^
+
+2025-01-31 02:02:39,113 - INFO - Database connection closed.
+2025-01-31 02:02:51,294 - INFO - Database connection established successfully.
+2025-01-31 02:02:51,301 - INFO - Tables successfully created.
+2025-01-31 02:02:51,302 - INFO - Database connection closed.
+2025-01-31 02:02:55,723 - INFO - Database connection established successfully.
+2025-01-31 02:02:55,728 - ERROR - Error inserting data into the database: invalid input syntax for type bigint: "DoctorsET_864"
+LINE 3:             VALUES ('DoctorsET_864', '2023-12-18T17:04:02+00...
+                            ^
+
+2025-01-31 02:02:55,729 - INFO - Database connection closed.
+2025-01-31 02:04:14,980 - INFO - Removed 0 duplicate rows.
+2025-01-31 02:04:14,990 - INFO - Removed 1251 rows due to missing values.
+2025-01-31 02:04:15,001 - INFO - Standardized date formats and cleaned text fields.
+2025-01-31 02:04:15,007 - INFO - Data validation completed.
+2025-01-31 02:04:15,057 - INFO - Cleaned data stored in ../data/cleaned_data.csv
+2025-01-31 02:04:15,117 - INFO - Database connection established successfully.
+2025-01-31 02:04:15,129 - INFO - Tables successfully created.
+2025-01-31 02:04:15,131 - INFO - Database connection closed.
+2025-01-31 02:04:15,155 - INFO - Database connection established successfully.
+2025-01-31 02:04:15,160 - ERROR - Error inserting data into the database: invalid input syntax for type integer: "DoctorsET_864"
+LINE 3:             VALUES ('DoctorsET_864', '2023-12-18T17:04:02+00...
+                            ^
+
+2025-01-31 02:04:15,161 - INFO - Database connection closed.
+2025-01-31 02:05:29,387 - INFO - Removed 0 duplicate rows.
+2025-01-31 02:05:29,394 - INFO - Removed 1251 rows due to missing values.
+2025-01-31 02:05:29,405 - INFO - Standardized date formats and cleaned text fields.
+2025-01-31 02:05:29,413 - INFO - Data validation completed.
+2025-01-31 02:05:29,479 - INFO - Cleaned data stored in ../data/cleaned_data.csv
+2025-01-31 02:05:29,521 - INFO - Database connection established successfully.
+2025-01-31 02:05:29,529 - INFO - Tables successfully created.
+2025-01-31 02:05:29,530 - INFO - Database connection closed.
+2025-01-31 02:05:29,554 - INFO - Database connection established successfully.
+2025-01-31 02:05:29,559 - ERROR - Error inserting data into the database: invalid input syntax for type integer: "DoctorsET_864"
+LINE 3:             VALUES ('DoctorsET_864', '2023-12-18T17:04:02+00...
+                            ^
+
+2025-01-31 02:05:29,560 - INFO - Database connection closed.
+2025-01-31 02:06:40,714 - INFO - Removed 0 duplicate rows.
+2025-01-31 02:06:40,724 - INFO - Removed 1251 rows due to missing values.
+2025-01-31 02:06:40,739 - INFO - Standardized date formats and cleaned text fields.
+2025-01-31 02:06:40,745 - INFO - Data validation completed.
+2025-01-31 02:06:40,795 - INFO - Cleaned data stored in ../data/cleaned_data.csv
+2025-01-31 02:06:40,835 - INFO - Database connection established successfully.
+2025-01-31 02:06:40,844 - INFO - Tables successfully created.
+2025-01-31 02:06:40,844 - INFO - Database connection closed.
+2025-01-31 02:06:40,863 - INFO - Database connection established successfully.
+2025-01-31 02:06:41,835 - INFO - Data successfully inserted into the PostgreSQL database.
+2025-01-31 02:06:41,836 - INFO - Database connection closed.
+2025-02-03 23:20:04,769 - INFO - Database connection established successfully.
+2025-02-03 23:20:41,104 - INFO - Database connection established successfully.
+2025-02-03 23:29:41,742 - INFO - Database connection established successfully.
+2025-02-03 23:29:46,197 - INFO - Database connection established successfully.
+2025-02-03 23:37:02,256 - INFO - Database connection established successfully.
+2025-02-03 23:37:02,275 - INFO - Database connection established successfully.
+2025-02-03 23:45:40,924 - INFO - Database connection established successfully.
+2025-02-03 23:45:40,947 - INFO - Database connection established successfully.

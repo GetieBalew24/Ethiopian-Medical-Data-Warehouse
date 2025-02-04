@@ -4,7 +4,7 @@ from fastapi import FastAPI, Depends, HTTPException
 from sqlalchemy.orm import Session
 from FAST_API import crud, models, schemas
 from database import SessionLocal, engine
-
+import uuid
 # Initialize FastAPI
 app = FastAPI()
 
@@ -29,15 +29,15 @@ def read_detection_results(skip: int = 0, limit: int = 10, db: Session = Depends
     return results
 
 @app.get("/detection_results/{result_id}", response_model=schemas.DetectionResult)
-def read_detection_result(result_id: int, db: Session = Depends(get_db)):
+def read_detection_result(result_id: uuid.UUID, db: Session = Depends(get_db)):
     db_result = crud.get_detection_result(db, result_id=result_id)
     if db_result is None:
         raise HTTPException(status_code=404, detail="Result not found")
     return db_result
 
 @app.delete("/detection_results/{result_id}")
-def delete_detection_result(result_id: int, db: Session = Depends(get_db)):
-    db_result = crud.delete_detection_result(db, result_id=result_id)
+def delete_detection_result(result_id: uuid.UUID, db: Session = Depends(get_db)):
+    db_result = crud.delete_detection_result(db, result_id)
     if db_result is None:
         raise HTTPException(status_code=404, detail="Result not found")
     return {"message": "Detection result deleted"}

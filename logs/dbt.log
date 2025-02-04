@@ -1,0 +1,32 @@
+[0m18:39:00.528518 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78760b2d1fd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78760b103590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78760b101e50>]}
+
+
+============================== 18:39:00.531225 | 559bb623-bffd-4ee5-9863-1841f6c5241f ==============================
+[0m18:39:00.531225 [info ] [MainThread]: Running with dbt=1.9.2
+[0m18:39:00.531616 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'logs', 'profiles_dir': '/home/gech/.dbt', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'invocation_command': 'dbt init ethi_medical_dbt', 'log_format': 'default', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m18:39:00.543469 [warn ] [MainThread]: [ConfigFolderDirectory]: Unable to parse logging event dictionary. Failed to parse dir field: expected string or bytes-like object, got 'PosixPath'.. Dictionary: {'dir': PosixPath('/home/gech/.dbt')}
+[0m18:39:00.543926 [info ] [MainThread]: Creating dbt configuration folder at 
+[0m18:39:00.545098 [debug] [MainThread]: Starter project path: /home/gech/10 acadamy/week-7/Project/Ethiopian-Medical-Data-Warehouse/venv/lib/python3.12/site-packages/dbt/include/starter_project
+[0m18:39:00.547236 [info ] [MainThread]: 
+Your new dbt project "ethi_medical_dbt" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m18:39:00.547709 [info ] [MainThread]: Setting up your profile.
+[0m18:42:31.212095 [info ] [MainThread]: Profile ethi_medical_dbt written to /home/gech/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m18:42:31.214628 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 210.75105, "process_in_blocks": "1472", "process_kernel_time": 0.085061, "process_mem_max_rss": "94132", "process_out_blocks": "80", "process_user_time": 0.969567}
+[0m18:42:31.215528 [debug] [MainThread]: Command `dbt init` succeeded at 18:42:31.215330 after 210.75 seconds
+[0m18:42:31.216240 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78760a733470>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78760a9de960>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78760a69bfb0>]}
+[0m18:42:31.217066 [debug] [MainThread]: Flushing usage events
+[0m18:42:32.344192 [debug] [MainThread]: An error was encountered while trying to flush usage events
